@@ -45,7 +45,7 @@ button {
 }
 
 
-p, pre   {
+p, pre, ul   {
     font-family: 'BBBBaskervvol-Base';
     font-size: 20px;
     color: #000000;

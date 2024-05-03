@@ -34,14 +34,17 @@ h2 {
     padding:20px 5px 15px;
     margin-top: 20%;
 }
+
+
 button {
     font-family:'Compagnon-Light';
     font-size: 12px;
     margin-right: 2%;
-    float: right;
+    float:left;
     color:#5f6505;
     text-align: right;
     padding: 4px;
+    margin-left: 20px;
 }
 
 

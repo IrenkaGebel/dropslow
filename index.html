@@ -1,22 +1,22 @@
-<html lang="pl" lang="eng">
+<html lang="pl" lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dropsłów</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title"><em>drop słów</em></h1>
-    <h2 id="43"><a href="week43.html">week 43</a></h2>
-     <h2 id="42"><a href="week42.html">week 42</a></h2>
-     <h2 id="41"><a href="week41.html">week 41</a></h2>
-     <h2 id="40"><a href="week40.html">week 40</a></h2>
+    <h1><em>drop słów</em></h1>
+    <!-- <h2 id="43"><a href="week43.html">week 43</a></h2>
+    <h2 id="42"><a href="week42.html">week 42</a></h2>
+    <h2 id="41"><a href="week41.html">week 41</a></h2>
+    <h2 id="40"><a href="week40.html">week 40</a></h2>
     <h2 id="39"><a href="week39.html">week 39</a></h2>
-     <h2 id="38"><a href="week38.html">week 38</a></h2>
-     <h2 id="37"><a href="week37.html">week 37</a></h2>
+    <h2 id="38"><a href="week38.html">week 38</a></h2>
+    <h2 id="37"><a href="week37.html">week 37</a></h2>
     <h2 id="36"><a href="week36.html">week 36</a></h2>
-     <h2 id="35"><a href="week35.html">week 35</a></h2>
-     <h2 id="34"><a href="week34.html">week 34</a></h2>
+    <h2 id="35"><a href="week35.html">week 35</a></h2>
+    <h2 id="34"><a href="week34.html">week 34</a></h2>
     <h2 id="33"><a href="week33.html">week 33</a></h2>
     <h2 id="32"><a href="week32.html">week 32</a></h2>
     <h2 id="31"><a href="week31.html">week 31</a></h2>
@@ -51,6 +51,32 @@
     <h2 id="3"><a href="week3.html">week 3</a></h2>
     <h2 id="2"><a href="week2.html">week 2</a></h2>
     <h2 id="1"><a href="week1.html">week 1</a></h2>
-    <img src=""></img>
+    <img src=""></img> -->
+
+    <script>
+      function createHeadings(latest) {
+        const headers = [];
+
+        for (let i = 1; i <= latest; i++) {
+          let header = `<h2 id="week-${i}">
+                          <a href="week${i}.html">Week ${i}</a>
+                        </h2>`;
+          headers.push(header);
+        }
+
+        // Reverse order
+        headers.reverse();
+
+        // Convert array to single string
+        const headerString = headers.join("");
+
+        // Insert after the title element
+        document
+          .querySelector("h1")
+          .insertAdjacentHTML("afterend", headerString);
+      }
+
+      createHeadings(43);
+    </script>
   </body>
 </html>
